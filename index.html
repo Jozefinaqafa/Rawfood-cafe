@@ -10,28 +10,29 @@
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link type="text/css" rel="stylesheet" href="css/reset.css">
       <link type="text/css" rel="stylesheet" href="css/style.css" >
-	  <link href="lightbox2-master/src/css/lightbox.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">	  <link href="lightbox2-master/src/css/lightbox.css" rel="stylesheet">
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    </head>
    <body>
-    
+        <!--wrapper-->
         <div id="wrapper">
 
             <!-- Navigation bar -->
             <div id="navigation" class="cf">
                 <a href="index.html"><img id="logo" src="images/logo.png"  alt="this is a image of our logo" /></a>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="gallery.html">Gallery</a> </li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a id="nav-home" href="javascript:void(0)">Home</a></li>
+                    <li><a id="nav-menu" href="javascript:void(0)">Menu</a> </li>
+                    <li><a id="nav-gallery" href="javascript:void(0)">Gallery</a></li>
+                    <li><a id="nav-contact" href="javascript:void(0)">Contact Us</a></li>
                 </ul>
             </div>
 			
 			<!-- Header -->
 			<div id="header">
 				<div class="infobox">
-					<h1>Come visit our cafe, we provide gluten-free, dairy-free options and home made daily cakes</h1>
+					<h1>Rise and shine It´s  smoothie time!</h1>
+					<h2>Come visit our cafe, we provide gluten-free, dairy-free options and home made daily cakes</h2>
 				</div>
             </div>
             
@@ -42,38 +43,56 @@
 						<p>
 							Rawfood café is a unique city centre organic and vegan friendly café situated in Temple Bar. Serving up to everything from organically farmed fair trade coffee to freshly made sandwiches also serving freshly prepared smoothies, juices with a scope of protein or bone broth powder, for those customers after using the gym in Temple Bar to nourish their body after exercise. So, whether you are a vegan or vegetarian or considering of keeping slim or taking care of your health Rawfood Café is the right choice. 
 						</p>
-                    <button>See Menu</button>
+                    <button id="see-menu">See Menu</button>
                 </div>
             </div>
 			
             <!-- Carousel -->
             <div id="carousel">
 
-                <div class="carousel-item">
+                <div class="carousel-item" id="smoothies-and-juices">
                     <p>
                         Smoothies & Juices
                     </p>
                 </div>
 
-                <div class="carousel-item">
+                <div class="carousel-item" id="bars-and-cakes">
                     <p>
                         Bars & Cakes
                     </p>
                 </div>
 
-                <div class="carousel-item">
+                <div class="carousel-item" id="collagen-protein">
                     <p>
                         Collagen Protein
                     </p>
                 </div>
 
-                <div class="carousel-item">
+                <div class="carousel-item" id="salads">
                     <p>
-                        Healthy Living
+                        Salads
                     </p>
                 </div>
             </div>
 
+            <!-- Gallery -->
+            <div id="gallery">
+                <div class="row">
+                        <div><img src="images/Gallery/cofee2.jpg" alt="Coffee cup image" ></div>
+                        <div><img src="images/Gallery/flower.jpg" alt="juice image"></div>
+                        <div><img src="images/Gallery/cupcake.jpg" alt="cup cake images"></div>
+                        <div><img src="images/Gallery/cakes.jpg" alt="cakes image"></div>
+                </div>
+                <div class="row">
+                        <div><img src="images/Gallery/coffee.jpg" alt="cup of coffee image"></div>
+                        <div><img src="images/Gallery/green.jpg" alt="green juice image"></div>
+                        <div><img src="images/Gallery/peach.jpg" alt="peach smoothie image"></div>
+                        <div><img src="images/Gallery/smoothie.jpg" alt="protein smoothie image"></div>
+                </div>
+    
+            </div>
+
+            <!-- Contact -->
             <div id="contact">
 
                 <div class="contact-form">
@@ -86,32 +105,155 @@
 
                         <div class="form-row">
                             <label>Email</label>
+                            <input type="email">
+                        </div>
+
+                        <div class="form-row">
+							<label>Subject</label>
                             <input type="text">
                         </div>
 
                         <div class="form-row">
-                            <input type="button">
+							<label>Message</label>
+                            <textarea rows="5"></textarea>
                         </div>
-                        
+
+                        <div class="form-row">
+							<label></label>
+                            <input type="button" value="Submit">
+                        </div>
                     </form>
                 </div>
 
                 <div class="contact-details">
-                    details
+                    
+                    <h3>Address</h3>
+                    <p>Rawfood Cafe</p>
+                    <p>Temple Bar Dublin 1</p>
+                    
+                   <p> +01 269023  info@rawfoodcafe.ie</p>
+                    <h3>Opening Hours </h3>
+                    <p>Monday - Thursday 9am - 6pm</p>
+                    <p>Friday - Sunday 9am - 8pm</p>  
+
+                    <img src="images/map.png" alt="this is a map" />
+
                 </div>
                 
             </div>
+            <!--contct closes-->
 
-
-
-
-	    </div>
-	  
-	  
-	  
         </div>
-        <footer  class="cf">
-            <p><small>Copyright &copy; Green Card Dating-2017</small></p>
+        <!--wrapper closes-->
+        
+        <!--poppup window-->
+        <div id="popup-window">
+            <span class="close">X</span>
+
+            <div class="gallery-item">
+                <img src="">
+            </div>
+
+            <div class="smoothies-and-juices">
+                
+                <h2>Smoothies & Juices</h2>
+                <ul>
+                    <li>Dare to Detox<br>
+                        <br>
+                        Grapefruit, carrot & apple juice </li>
+                    <li>Up Beet<br>
+                        <br>
+                        Beetroot, ginger, apple</li>
+                    <li>Power Pack<br>
+                        <br>
+                    Carrot, banana,strawberries, pineapple</li>
+                    <li>Orange Juice<br>
+                        <br>
+                    Oranges & more oranges</li>
+                    <li>Pure Energy<br>
+                        <br>
+                        Banana, peach, pinapple, mango, yogurt</li>
+                    <li>Green Machine<br>
+                        <br>
+                        Spinach, cranberry juice, yogurt </li>
+                        <li>Spring Collagen<br>
+                            <br>
+                        Cranberry juice, mixed berries, banana, yogurt</li>
+                        <br>
+                    <li>Small  €3.70  Reg  €4.00  Large €5.40</li>
+
+                    
+                </ul>
+
+            </div>
+
+            <div class="bars-and-cakes">
+                <h2>Bars & Cakes</h2>
+                
+                <ul>
+                    <li>Raw strawberry tiramisu </li>
+                    <li>The best vegan white chocolate cheesecake </li>
+                    <li>Raw vegan medicinal cacao chai cheesecake </li>
+                    <li>Raw vegan blueberry cupcakes </li>
+                    <li>Carrot cake minis </li>
+                    <li>Raw hazelnut and coffee chocolate cake </li>
+                    <li>Raw minty brownie bites </li><br>
+                    <br>
+                    <li> Slice  €4.00 </li>
+                </ul>
+
+            </div>
+            <div class="collagen-protein">
+                <h2>Collagen & Protein</h2>
+                
+                <ul>
+                    <li>Kale Berry & Acai Powder<br>
+                    <br>Protein source: Flaxseeds, chia seeds, hemp powder, banana, berries</li>
+                    <li>Classic Green Monster Smoothie<br>
+                    <br>Protein source:Peanut butter, chia seeds, bone broth powder, banana, spinach</li>
+                    <li>Peanut Butter Oatmeal Smoothie<br>
+                    <br>Protein source: Peanut butter, almont milk, banana, oats</li><br>
+                    <br>
+
+                    <li>Small  €3.70  Reg  €4.00  Large €5.40</li>
+                    
+                </ul>
+
+            </div>
+
+            <div class="salads">
+                <h2>Salads</h2>
+                
+                <ul>
+                    <li>Moroccan-Ish Sweet Potato Sunshine Salad </li><br>
+                    <br>
+                    <li>Grilled Romaine, Red Onion, Avocado, and Bacon Salad</li><br>
+                    <br>
+                    <li>Rainbow Chicken Salad with Almond Honey Mustard Dressing, Chickpea, avocado, feta cheese</li><br>
+                    <br>
+                    <li> Rosemary Chicken, Bacon, and Avocado Salad</li><br>
+                    <br>
+                    <li>Spiralized Vegetable Salad with Roasted Chickpeas</li><br>
+                    <br>
+                    <li>Kale Caesar Salad</li><br>
+                    <br>
+                    <li>Small Plate  €3.90  Reg  €6.00  Large €8.00 </li>
+            
+                </ul>
+
+            </div>
+        </div> <!--popup window closes-->
+
+        <footer> <!--footer-->
+            <p><small>Copyright &copy; Rawfood cafe</small></p>
+            <ul>
+                <li><i class="fab fa-facebook-square fa-3x"></i></li>
+                <li><i class="fab fa-instagram fa-3x"></i></li>                
+                <li><i class="fab fa-pinterest-square fa-3x"></i></li>
+            </ul>
         </footer>
+
+
+        <script src="js/script.js"></script>
    </body>
 </html>

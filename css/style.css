@@ -9,6 +9,22 @@ html {
 body {
     background-color: #fff;
     font-family: sans-serif;
+    color: #666;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+input[type='text'], 
+input[type='password'], 
+input[type='email'], 
+textarea {
+    padding: 7.5px;
+    font-size: 18px;
+    border: none;
+    border-radius: 3px;
+    color: #666;
 }
 
 #wrapper {
@@ -21,13 +37,13 @@ body {
 #navigation {
     width: 100%;
     height: 75px;
-    /* background-color: #dfe5ef; */
+    /* background-color: #000; */
     display: flex;
     position: fixed;
     background-image: linear-gradient(
-        rgba(0, 0, 0, 0.8),
-        rgba(100, 100, 100, 0.5)
-      );
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.5)
+    );
 }
 
 #navigation img#logo {
@@ -142,23 +158,35 @@ body {
     background-image:  url("../images/avocado.jpg");
     background-size: cover;
     background-position: center center;
-    height:700px;
+    height: 700px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
 }
 
 #header .infobox {
-    flex: 0.3;
-    background-color: rgba(255, 255, 255, 0.5);
-    margin-right: 100px;
-    height: 500px;
-    padding: 1em;
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* margin-right: 100px; */
+    height: 100%;
+    padding: 200px 0;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+#header .infobox h1 {
+    font-size: 38px;
+    padding: 30px 0;
+}
+
+#header .infobox h2 {
+    font-size: 24px;
 }
 
 #introduction {
-    height: 500px;
-    background-color: c3deef;
+    height: 600px;
+    background-color: #c3deef;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -166,7 +194,7 @@ body {
 
 #introduction .infobox {
     flex: 0.5;
-    height: 400px;
+    height: 500px;
     padding: 1em;
     text-align: center;
 }
@@ -177,7 +205,7 @@ body {
     text-align: center;
     margin-bottom: 50px;
     font-weight: 400;
-    text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
 }
 
 #introduction .infobox p {
@@ -185,7 +213,7 @@ body {
     font-size: 22px;
     text-align: center;
     line-height: 1.5em;
-    text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
     margin-bottom: 40px;
 }
 
@@ -204,9 +232,33 @@ body {
     background-color: rgba(123, 151, 196, 1);
 }
 
+#gallery {
+    /* display: flex; */
+}
+
+#gallery .row {
+    display: flex;
+    margin-bottom: -5px;
+}
+
+#gallery .row div {
+    flex-basis: 33%;
+    flex: 1;
+}
+
+#gallery .row div img {
+    width: 100%;
+    /* cursor: pointer; */
+}
+
+#gallery .row div img:hover {
+    width: 100%;
+    cursor: pointer;
+}
+
 #contact {
     height: 500px;
-    background-color: #dd744d;
+    background-color: #dfe5e6;
     display: flex;
 }
 
@@ -219,7 +271,7 @@ body {
     flex: 1;
     order: 1;
     /* background-color: #fff; */
-    border: solid 1px #000;
+    /* border: solid 1px #000; */
     padding: 30px; 
 }
 
@@ -229,15 +281,43 @@ body {
     text-align: center;
     margin-bottom: 50px;
     font-weight: 400;
-    /* text-shadow: 2px 2px 2px rgba(150, 150, 150, 1); */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+#contact .contact-form .form-row {
+    margin: 15px 0;
 }
 
 #contact .contact-details {
     flex: 1;
     order: 2;
-    /* background-color: #d1d1d1; */
+    padding: 15px; 
+    background-color: #d1d1d1;
+    text-align: center;
 }
 
+#contact .contact-details h3 {
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 400;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+    margin: 15px;
+}
+
+#contact .contact-details p {
+    color: #fff;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+    line-height: 24px;
+}
+
+#contact .contact-details img {
+    width: 350px;
+    margin: 20px auto;
+}
+    
 .form-row {
     display: flex;
     padding: 0 50px;
@@ -248,11 +328,137 @@ body {
     /* text-align: right; */
 }
 
-.form-row input {
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row textarea  {
     flex: 3;
 }
 
+.form-row input[type="button"] {
+    color: #fff;
+    border: solid 1px #a0c4ff;
+    border-radius: 3px;
+    background-color: #a0c4ff;
+    font-size: 22px;
+    padding: 10px 30px;
+    transition: 0.5s;
+}
 
+.form-row input[type="button"]:hover {
+    border: solid 1px #7b97c4;
+    background-color: rgba(123, 151, 196, 1);
+}
+
+#popup-window {
+    top: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.75);
+    height: 100%;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#popup-window div {
+    display: none;
+    background-color: #fff;
+    height: 80%;
+    flex: 0.8;
+    border-radius: 5px;
+    overflow: auto;
+}
+
+#popup-window .gallery-item {
+    /* flex: 0.65; */
+    width: 750px !important;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.0);
+    overflow: hidden;
+    text-align: center;
+}
+
+#popup-window .gallery-item img {
+    width: 750px;
+    height: 500px;
+}
+
+#popup-window span.close {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    padding: 10px;
+    font-size: 32px;
+    color: #666;
+}
+
+#popup-window span.close:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+#popup-window div h2 {
+    font-size: 32px;
+    text-align: center;
+    padding: 30px;
+}
+
+#popup-window div ul {
+    margin-top: 30px;
+    font-size: 24px;
+    text-align: center;
+}
+
+#popup-window div li {
+    
+    padding: 10px;
+
+}
+/*
+#popup-window div ul
+
+ul li:first-child {
+
+}
+    
+ */
+
+
+footer {
+    height: 80px;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+}
+
+footer p {
+    flex: 1;
+    font-size: 20px;
+    text-align: center;
+    color: #999;
+}
+
+footer ul {
+    flex:1;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+}
+
+footer ul li {
+    flex: 0.1;
+}
+
+
+
+/* Mobile */
+@media only screen and (max-width: 480px) {
+
+
+
+} 
 
 
 
