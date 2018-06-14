@@ -548,6 +548,11 @@ footer ul li {
         display: flex;
     }
 
+    #popup-window .gallery-item img {
+        width: 100%;
+        height: auto;
+    }
+
     #gallery .row {
         flex: 1;
         display: flex;
