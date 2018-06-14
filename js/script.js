@@ -3,7 +3,7 @@ $(document).ready(function(){
     // Link "See Menu" button to menu section
     $("#see-menu").click(function(){
         $('html, body').animate({
-            scrollTop: $("#carousel").offset().top - 75
+            scrollTop: $("#menu").offset().top - 75
         }, 1000);
     });
 // link nav item to home section
@@ -16,7 +16,7 @@ $(document).ready(function(){
     // link nav item menu  to menu section 
     $("#nav-menu").click(function(){
         $('html, body').animate({
-            scrollTop: $("#carousel").offset().top - 75
+            scrollTop: $("#menu").offset().top - 75
         }, 1000);
     });
 
@@ -78,3 +78,12 @@ $(document).ready(function(){
     });
 
 });
+    // 
+function myFunction() {
+    var x = document.getElementById("topnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}

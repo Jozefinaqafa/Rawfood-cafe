@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <title>Rawfood Cafe</title>
-      <meta charset="UFT-8">
+      <meta charset="UTF-8">
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="description" content="Organic Rawfood Cafe In Dublin 2, fresh products everyday, vegetarian, vegan cakes for a holistic living option, all welcome!">
       <meta name="keywords" content="HTML, SSS, XML, JAVASCRIPT">
@@ -10,7 +10,8 @@
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link type="text/css" rel="stylesheet" href="css/reset.css">
       <link type="text/css" rel="stylesheet" href="css/style.css" >
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">	  <link href="lightbox2-master/src/css/lightbox.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">	  
+      <link href="lightbox2-master/src/css/lightbox.css" rel="stylesheet">
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    </head>
    <body>
@@ -20,18 +21,19 @@
             <!-- Navigation bar -->
             <div id="navigation" class="cf">
                 <a href="index.html"><img id="logo" src="images/logo.png"  alt="this is a image of our logo" /></a>
-                <ul>
+                <ul id="topnav" class="topnav" >
                     <li><a id="nav-home" href="javascript:void(0)">Home</a></li>
                     <li><a id="nav-menu" href="javascript:void(0)">Menu</a> </li>
                     <li><a id="nav-gallery" href="javascript:void(0)">Gallery</a></li>
                     <li><a id="nav-contact" href="javascript:void(0)">Contact Us</a></li>
+                    <li class="icon" style="display: none"><a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">&#9776;</a></li>
                 </ul>
             </div>
 			
 			<!-- Header -->
 			<div id="header">
 				<div class="infobox">
-					<h1>Rise and shine It´s  smoothie time!</h1>
+					<h1>Rise and shine It's  smoothie time!</h1>
 					<h2>Come visit our cafe, we provide gluten-free, dairy-free options and home made daily cakes</h2>
 				</div>
             </div>
@@ -47,28 +49,28 @@
                 </div>
             </div>
 			
-            <!-- Carousel -->
-            <div id="carousel">
+            <!-- Menu -->
+            <div id="menu">
 
-                <div class="carousel-item" id="smoothies-and-juices">
+                <div class="menu-item" id="smoothies-and-juices">
                     <p>
                         Smoothies & Juices
                     </p>
                 </div>
 
-                <div class="carousel-item" id="bars-and-cakes">
+                <div class="menu-item" id="bars-and-cakes">
                     <p>
                         Bars & Cakes
                     </p>
                 </div>
 
-                <div class="carousel-item" id="collagen-protein">
+                <div class="menu-item" id="collagen-protein">
                     <p>
                         Collagen Protein
                     </p>
                 </div>
 
-                <div class="carousel-item" id="salads">
+                <div class="menu-item" id="salads">
                     <p>
                         Salads
                     </p>
